@@ -1,0 +1,23 @@
+{
+  "name": "ngx-s2",
+  "version": "0.0.1-beta.3",
+  "author": "laffery",
+  "keywords": [
+    "ant",
+    "antv",
+    "angular",
+    "s2",
+    "S2",
+    "spreadsheet",
+    "pivot table",
+    "table"
+  ],
+  "dependencies": {
+    "@antv/g2": "^5.1.21",
+    "@antv/s2": "^2.4.0"
+  },
+  "peerDependencies": {
+    "@angular/common": "^19.0.0",
+    "@angular/core": "^19.0.0"
+  }
+}
