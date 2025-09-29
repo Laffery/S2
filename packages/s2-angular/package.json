@@ -3,20 +3,20 @@
   "version": "0.0.0",
   "scripts": {
     "start": "ng serve",
-    "start:doc": "ng serve --project ngx-s2-doc",
     "build": "ng build --project ngx-s2-lib",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
   "private": true,
   "dependencies": {
-    "@angular/animations": "^19.0.0",
-    "@angular/common": "^19.0.0",
-    "@angular/compiler": "^19.0.0",
-    "@angular/core": "^19.0.0",
-    "@angular/forms": "^19.0.0",
-    "@angular/platform-browser": "^19.0.0",
-    "@angular/platform-browser-dynamic": "^19.0.0",
+    "@angular/animations": "^20.3.2",
+    "@angular/common": "^20.3.2",
+    "@angular/compiler": "^20.3.2",
+    "@angular/core": "^20.3.2",
+    "@angular/forms": "^20.3.2",
+    "@angular/platform-browser": "^20.3.2",
+    "@angular/platform-browser-dynamic": "^20.3.2",
+    "@angular/router": "^20.3.2",
     "@antv/g2": "^5.2.12",
     "@antv/s2": "^2.3.0",
     "rxjs": "~7.8.2",
@@ -24,11 +24,12 @@
     "zone.js": "~0.15.0"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "^19.0.0",
-    "@angular/cli": "^19.0.0",
-    "@angular/compiler-cli": "^19.0.0",
+    "@angular/build": "^20.3.3",
+    "@angular/cli": "^20.3.3",
+    "@angular/compiler-cli": "^20.3.2",
     "@types/node": "^20.19.2",
-    "ng-packagr": "^19.2.2",
+    "less": "^4.2.0",
+    "ng-packagr": "^20.3.0",
     "typescript": "~5.8.2"
   }
 }

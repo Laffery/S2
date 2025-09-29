@@ -1,6 +1,6 @@
 {
   "name": "ngx-s2",
-  "version": "0.0.1-beta.3",
+  "version": "0.0.1-alpha.0",
   "author": "laffery",
   "keywords": [
     "ant",
@@ -17,7 +17,7 @@
     "@antv/s2": "^2.4.0"
   },
   "peerDependencies": {
-    "@angular/common": "^19.0.0",
-    "@angular/core": "^19.0.0"
+    "@angular/common": "^20.0.0",
+    "@angular/core": "^20.0.0"
   }
 }

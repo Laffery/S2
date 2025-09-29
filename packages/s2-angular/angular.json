@@ -10,29 +10,29 @@
           "style": "less"
         }
       },
-      "root": "projects/s2-angular-doc",
-      "sourceRoot": "projects/s2-angular-doc/src",
+      "root": "docs",
+      "sourceRoot": "docs/src",
       "prefix": "app",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:application",
+          "builder": "@angular/build:application",
           "options": {
-            "outputPath": "dist/s2-angular-doc",
-            "index": "projects/s2-angular-doc/src/index.html",
-            "browser": "projects/s2-angular-doc/src/main.ts",
+            "outputPath": "dist/doc",
+            "index": "docs/src/index.html",
+            "browser": "docs/src/main.ts",
             "polyfills": [
               "zone.js"
             ],
-            "tsConfig": "projects/s2-angular-doc/tsconfig.app.json",
+            "tsConfig": "docs/tsconfig.app.json",
             "inlineStyleLanguage": "less",
             "assets": [
               {
                 "glob": "**/*",
-                "input": "projects/s2-angular-doc/public"
+                "input": "docs/public"
               }
             ],
             "styles": [
-              "projects/s2-angular-doc/src/styles.less"
+              "docs/src/styles.less"
             ],
             "scripts": []
           },
@@ -61,40 +61,16 @@
           "defaultConfiguration": "production"
         },
         "serve": {
-          "builder": "@angular-devkit/build-angular:dev-server",
+          "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "s2-angular-doc:build:production"
+              "buildTarget": "ngx-s2-doc:build:production"
             },
             "development": {
-              "buildTarget": "s2-angular-doc:build:development"
+              "buildTarget": "ngx-s2-doc:build:development"
             }
           },
           "defaultConfiguration": "development"
-        },
-        "extract-i18n": {
-          "builder": "@angular-devkit/build-angular:extract-i18n"
-        },
-        "test": {
-          "builder": "@angular-devkit/build-angular:karma",
-          "options": {
-            "polyfills": [
-              "zone.js",
-              "zone.js/testing"
-            ],
-            "tsConfig": "projects/s2-angular-doc/tsconfig.spec.json",
-            "inlineStyleLanguage": "less",
-            "assets": [
-              {
-                "glob": "**/*",
-                "input": "projects/s2-angular-doc/public"
-              }
-            ],
-            "styles": [
-              "projects/s2-angular-doc/src/styles.less"
-            ],
-            "scripts": []
-          }
         }
       }
     },
@@ -157,6 +133,32 @@
           }
         }
       }
+    }
+  },
+  "schematics": {
+    "@schematics/angular:component": {
+      "type": "component"
+    },
+    "@schematics/angular:directive": {
+      "type": "directive"
+    },
+    "@schematics/angular:service": {
+      "type": "service"
+    },
+    "@schematics/angular:guard": {
+      "typeSeparator": "."
+    },
+    "@schematics/angular:interceptor": {
+      "typeSeparator": "."
+    },
+    "@schematics/angular:module": {
+      "typeSeparator": "."
+    },
+    "@schematics/angular:pipe": {
+      "typeSeparator": "."
+    },
+    "@schematics/angular:resolver": {
+      "typeSeparator": "."
     }
   }
 }
