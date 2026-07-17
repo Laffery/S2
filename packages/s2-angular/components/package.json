@@ -13,10 +13,11 @@
     "table"
   ],
   "dependencies": {
-    "@antv/g2": "^5.1.21",
-    "@antv/s2": "^2.4.0"
+    "tslib": "^2.3.0"
   },
   "peerDependencies": {
+    "@antv/g2": ">=5.1.21",
+    "@antv/s2": "^2.0.0",
     "@angular/common": "^20.0.0",
     "@angular/core": "^20.0.0"
   }

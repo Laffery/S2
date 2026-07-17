@@ -1,13 +1,25 @@
-import {Component} from '@angular/core';
-import {BaseSheetComponent} from './base-sheet';
+import { Component, input } from '@angular/core';
+import { S2DataConfig, ThemeCfg } from '@antv/s2';
+import { BaseSheetComponent } from './base-sheet';
+import { SheetComponentOptions } from './options';
 
 @Component({
-  selector: 'app-table-sheet',
+  selector: 's2-table-sheet',
   imports: [BaseSheetComponent],
   template: `
-    <app-base-sheet [dataCfg]="{ data: [], fields: { rows: [], columns: [], values: [] } }" sheetType="table">
-      table-sheet works!
-    </app-base-sheet>
-  `
+    <s2-base-sheet
+      [dataCfg]="dataCfg()"
+      sheetType="table"
+      [options]="options()"
+      [themeCfg]="themeCfg()"
+    />
+  `,
 })
-export class TableSheetComponent {}
+export class TableSheetComponent {
+  readonly dataCfg = input<S2DataConfig>({
+    data: [],
+    fields: {},
+  });
+  readonly options = input<SheetComponentOptions>();
+  readonly themeCfg = input<ThemeCfg>();
+}

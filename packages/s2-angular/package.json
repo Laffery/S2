@@ -4,8 +4,9 @@
   "scripts": {
     "start": "ng serve",
     "build": "ng build --project ngx-s2-lib",
+    "tsc": "ng build --project ngx-s2-lib --configuration development",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "echo \"No tests configured for s2-angular yet\""
   },
   "private": true,
   "dependencies": {
